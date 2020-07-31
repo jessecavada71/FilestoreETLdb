@@ -1,0 +1,20 @@
+﻿CREATE TYPE [dbo].[Mollertech830Type] AS TABLE
+(
+	[TransmissionDatetime] VARCHAR(8) NOT NULL,
+	[Datetime] VARCHAR(8) NOT NULL,
+	[CustomerNumber] NUMERIC(12) NOT NULL,
+	[PlantNo] VARCHAR(50) NOT NULL,
+	[ConRefNo] VARCHAR(50) NOT NULL,
+	[ItemNoCust] VARCHAR(50) NOT NULL,
+	[ItemNoVend] VARCHAR(250) NULL,
+	[DueDate] VARCHAR(8) NOT NULL,
+	[Qty] NUMERIC(12) NOT NULL,
+	[UnMeas] VARCHAR(5) NOT NULL,
+	[CumOld] NUMERIC(12) NULL,
+	[CumNew] NUMERIC(12) NOT NULL,
+	[DateZero] VARCHAR(8) NOT NULL,
+	[AsnNo] VARCHAR(11) NULL,
+	[Address] VARCHAR(250) NOT NULL,
+	[City] VARCHAR(50) NOT NULL,
+	[State] VARCHAR(20) NOT NULL	
+)

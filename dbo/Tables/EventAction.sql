@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[EventAction]
+(
+	[EventActionId] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Name] VARCHAR(256) NOT NULL UNIQUE NONCLUSTERED ([Name]),
+	[CreatedDateTimeUTC] DATETIME2 (7) NOT NULL DEFAULT (getutcdate()),
+)
