@@ -35,19 +35,19 @@ CREATE TRIGGER [dbo].[Trigger_Mollertech830]
         SET NoCount ON
 
 		-- Constraint violation: Conflicting quantities
-		if exists(select top 1 1 from inserted)
-		begin
-			if exists(select top 1 1 from inserted as i
-				inner join Retry as r on r.RetryId = i.RetryId
-				where exists(select top 1 1 from Mollertech830 as m
-					inner join Retry as r2 on r2.RetryId = m.RetryId
-					where not i.Mollertech830Id = m.Mollertech830Id and i.ItemNoCust = m.ItemNoCust and i.DueDate = m.DueDate and i.[Address] = m.[Address] and i.City = m.City and i.[State] = m.[State] and r.ReceivedOnUTC = r2.ReceivedOnUTC and not i.Qty = m.Qty
-				)
-				)
-				begin
-					rollback transaction
-					raiserror ('Constraint violation: Conflicting quantities', 16, 1)
-				end
-		end
+		--if exists(select top 1 1 from inserted)
+		--begin
+		--	if exists(select top 1 1 from inserted as i
+		--		inner join Retry as r on r.RetryId = i.RetryId
+		--		where exists(select top 1 1 from Mollertech830 as m
+		--			inner join Retry as r2 on r2.RetryId = m.RetryId
+		--			where not i.Mollertech830Id = m.Mollertech830Id and i.ItemNoCust = m.ItemNoCust and i.DueDate = m.DueDate and i.CumNew = m.CumNew and i.[Address] = m.[Address] and i.City = m.City and i.[State] = m.[State] and r.ReceivedOnUTC = r2.ReceivedOnUTC and not i.Qty = m.Qty
+		--		)
+		--		)
+		--		begin
+		--			rollback transaction
+		--			raiserror ('Constraint violation: Conflicting quantities', 16, 1)
+		--		end
+		--end
     END
 GO
