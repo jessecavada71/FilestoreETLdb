@@ -7,6 +7,6 @@
     <TargetConnectionString>Data Source=filestoreetlqadb.shorr.com;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False</TargetConnectionString>
     <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
     <ProfileVersionNumber>1</ProfileVersionNumber>
-    <DeployDatabaseInSingleUserMode>True</DeployDatabaseInSingleUserMode>
+    <DeployDatabaseInSingleUserMode>False</DeployDatabaseInSingleUserMode>
   </PropertyGroup>
 </Project>
