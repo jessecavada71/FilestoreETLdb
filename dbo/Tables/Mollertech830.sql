@@ -19,7 +19,7 @@
 	[Address] VARCHAR(250) NOT NULL,
 	[City] VARCHAR(50) NOT NULL,
 	[State] VARCHAR(20) NOT NULL, 
-    [AorD] VARCHAR NULL
+    [AorD] VARCHAR NOT NULL
 )
 
 GO

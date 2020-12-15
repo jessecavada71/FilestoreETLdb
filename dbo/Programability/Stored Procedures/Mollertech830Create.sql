@@ -16,8 +16,8 @@ begin
 			insert into Retry ([Value], [ReceivedOnUTC]) values (@RetryIdentifier, @ReceivedOnUTC)
 			set @RetryId = SCOPE_IDENTITY()
 
-			insert into Mollertech830 (RetryId, TransmissionDatetime, [Datetime], CustomerNumber, PlantNo, ConRefNo, ItemNoCust, ItemNoVend, DueDate, Qty, UnMeas, CumOld, CumNew, DateZero, AsnNo, [Address], City, [State])
-			select @RetryId, TransmissionDatetime, [Datetime], CustomerNumber, PlantNo, ConRefNo, ItemNoCust, ItemNoVend, DueDate, Qty, UnMeas, CumOld, CumNew, DateZero, AsnNo, [Address], City, [State] from @Mollertech830Type
+			insert into Mollertech830 (RetryId, TransmissionDatetime, [Datetime], CustomerNumber, PlantNo, ConRefNo, ItemNoCust, ItemNoVend, DueDate, Qty, UnMeas, CumOld, CumNew, DateZero, AsnNo, [Address], City, [State], [AorD])
+			select @RetryId, TransmissionDatetime, [Datetime], CustomerNumber, PlantNo, ConRefNo, ItemNoCust, ItemNoVend, DueDate, Qty, UnMeas, CumOld, CumNew, DateZero, AsnNo, [Address], City, [State], [AorD] from @Mollertech830Type
 
 		commit transaction
 	end try
